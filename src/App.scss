@@ -1,0 +1,54 @@
+* {
+  padding: auto;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+@mixin threeMagicLines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  @include threeMagicLines()
+}
+
+.navigation{
+  @include threeMagicLines()
+}
+
+.sub-nav {
+  margin: 2em;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/IMG_9096a.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.about-section {
+  @include threeMagicLines();
+  width: 70vw;
+}
+
+.about-photo {
+  width: 50vw;
+  img {
+    width: 100%;
+  }
+}
+
+.about-text {
+  width: 50vw;
+}
+
+.portfolio{
+  @include threeMagicLines();
+}
