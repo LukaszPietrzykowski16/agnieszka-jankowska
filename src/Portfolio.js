@@ -5,7 +5,7 @@ import img1 from './images/IMG_9425a.jpg';
 
 function Portfolio() {
   return (
-      <div>
+   
       <Router>
         <div className='portfolio'>
           <div className='sub-portfolio'> <Link to="/"> <img src={img1}/> Reportaż ślubny </Link> </div>
@@ -26,7 +26,7 @@ function Portfolio() {
         <button className='portfolio-button'> Zobacz portfolio </button>
         </div>
     </Router>
-    </div>
+   
  );
 }
 

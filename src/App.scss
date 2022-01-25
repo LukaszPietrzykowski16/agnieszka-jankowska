@@ -20,10 +20,15 @@ a:visited {
   
 }
 
-
-
 @mixin threeMagicLines {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fourMagicLines {
+  display: flex wrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -77,6 +82,11 @@ nav {
   }
 }
 
+.about-text {
+  width: 50vw;
+  margin: 20px;
+}
+
 .container-text {
   font-size: 5em;
  
@@ -86,10 +96,7 @@ nav {
   text-align: center;
 }
 
-.about-text {
-  width: 50vw;
-  margin: 20px;
-}
+
 
 .portfolio{
   display: grid;
@@ -138,6 +145,9 @@ button {
 .offer-text{
   width: 70vw;
 }
+.offer-sub-text {
+  width: 50vw;
+}
 
 .contact {
   display: flex wrap;
@@ -149,4 +159,81 @@ button {
 
 .social {
   @include threeMagicLines();
+}
+
+footer {
+  display: flex wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(34, 34, 34);
+ 
+  color: white;
+}
+
+.footer-up {
+  @include threeMagicLines();
+ 
+}
+
+.footer-down {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+@media (max-width: 500px) {
+  .about-section {
+    @include fourMagicLines();
+    width: 90vw;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+  }
+
+  .about-photo {
+    width: 90vw;
+    img {
+      width: 100%;
+    }
+  }
+  
+  .about-text {
+    width: 90vw;
+    margin: 20px;
+  }
+
+  .portfolio{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90vw;
+  
+  }
+  
+  .sub-portfolio {
+    width: 80vw;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  .offer{
+    @include fourMagicLines();
+    margin-top: 10vh;
+  }
+  
+  .offer-photo {
+    width: 70vw;
+    img {
+      width: 100%;
+    }
+  }
+  
+  .offer-text{
+    width: 70vw;
+  }
+  .offer-sub-text {
+    width: 70vw;
+  }
 }
