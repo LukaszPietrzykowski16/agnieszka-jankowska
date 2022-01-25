@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+a:link{
+  text-decoration: none;
+  color: black;
+ 
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+  
+}
+
+
+
 @mixin threeMagicLines {
   display: flex;
   justify-content: center;
@@ -11,7 +29,11 @@
 }
 
 nav {
-  @include threeMagicLines()
+  @include threeMagicLines();
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  z-index: 100;
 }
 
 .navigation{
@@ -20,6 +42,13 @@ nav {
 
 .sub-nav {
   margin: 2em;
+}
+
+.sub-nav {
+  :hover {
+    color: purple;
+  }
+  font-weight: 600;
 }
 
 .container{
@@ -31,11 +60,14 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  filter: grayscale(10%);
 }
 
 .about-section {
   @include threeMagicLines();
   width: 70vw;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
 .about-photo {
@@ -45,10 +77,76 @@ nav {
   }
 }
 
+.container-text {
+  font-size: 5em;
+ 
+}
+.container-subtext {
+  font-size: 0.5em;
+  text-align: center;
+}
+
 .about-text {
   width: 50vw;
+  margin: 20px;
 }
 
 .portfolio{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70vw;
+
+}
+
+.sub-portfolio {
+  width: 20vw;
+  text-align: center;
+  img {
+    width: 100%;
+  }
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ 
+}
+
+.portfolio-button {
+  @include threeMagicLines();
+  margin-top: 10vh;
+}
+
+.offer{
+  @include threeMagicLines();
+  margin-top: 10vh;
+}
+
+.offer-photo {
+  width: 30vw;
+  img {
+    width: 100%;
+  }
+}
+
+.offer-text{
+  width: 70vw;
+}
+
+.contact {
+  display: flex wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.social {
   @include threeMagicLines();
 }

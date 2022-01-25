@@ -5,6 +5,9 @@ import Home from './Home';
 import Content from './Content';
 import About from './About';
 import Portfolio from './Portfolio';
+import Offer from './Offer';
+import Contact from './Contact';
+import Social from './Social';
 
 function Navigation() {
   return (
@@ -15,11 +18,11 @@ function Navigation() {
     </div>
     <Router>
         <div className='navigation'>
+        <div className='sub-nav'><Link to="/"> STRONA GŁÓWNA </Link> </div>
           <div className='sub-nav'><Link to="/"> Strona główna </Link> </div>
-          <div className='sub-nav'> <Link to="/"> Galeria </Link> </div>
-          <div className='sub-nav'> <Link to="/"> Kontakt </Link> </div>
-          <div className='sub-nav'> <Link to="/"> Oferta </Link> </div>
-          <div className='sub-nav'> <Link to="/"> O mnie </Link> </div>
+          <div className='sub-nav'><Link to="/"> Strona główna </Link> </div>
+          <div className='sub-nav'><Link to="/"> Strona główna </Link> </div>
+          <div className='sub-nav'><Link to="/"> Strona główna </Link> </div>
         </div>
         <Routes>
             <Route path="/" element={<Home />} />
@@ -31,6 +34,9 @@ function Navigation() {
    <Content />
    <About /> 
    <Portfolio />
+   <Offer /> 
+   <Contact />
+   <Social />
    </>
   );
 }
