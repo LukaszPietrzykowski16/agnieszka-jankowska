@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 function Footerelement() {
    return (
@@ -10,7 +13,7 @@ function Footerelement() {
      </div>
      <div className='footer-class'>
        Social Media
-       <p> fb ig  </p> 
+       <p> <FontAwesomeIcon icon={ faFacebook } />  <FontAwesomeIcon icon={ faInstagram } />   </p> 
     
      </div>
      <div className='footer-class'>

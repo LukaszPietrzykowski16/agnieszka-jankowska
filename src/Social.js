@@ -1,4 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+
 
 function Social() {
   return (
@@ -7,8 +11,8 @@ function Social() {
         <h1> Zapraszam na social media! </h1>
     </div>
      <div className='social'>
-        <div className='social-fb'> fb </div>
-        <div className='social-ig'> ig </div>
+        <div className='social-fb'> fb <FontAwesomeIcon icon={ faFacebook } /> </div>
+        <div className='social-ig'> ig <FontAwesomeIcon icon={ faInstagram } />  </div>
      </div>
      </>
  );
