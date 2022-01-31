@@ -1,11 +1,63 @@
-import React from 'react';
-import img1 from './images/IMG_9425a.jpg';
+import React, {useState, useEffect} from 'react';
+import img1 from './images/portfolio/7.jpg';
+import img2 from './images/portfolio/6.jpg';
+import img3 from './images/portfolio/13.jpg';
+import gsap from "gsap";
 
 function Offer() {
+
+  const imageArray = [img1, img2, img3]
+
+  const [index, setIndex] = useState(0);
+  
+  const [image, setImage] = useState(imageArray[index])
+ 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      
+    
+      setIndex( index + 1)
+     setImage(imageArray[index])
+     if (index === imageArray.length - 1){
+       setIndex(0)
+     }
+     console.log(index)
+    }, 4000)
+    
+    return () => {
+      clearInterval(interval);
+    }
+  })
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      gsap.to('.offer-photo', {
+        opacity: 0,
+        duration: 2.0
+       }) 
+    }, 3000)
+    
+   
+  })
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      gsap.to('.offer-photo', {
+        opacity: 1,
+        duration: 2.0
+       }) 
+    }, 5000)
+  
+  })
+
+ 
+
+
+
   return (
   <div className='offer'>
        <div className='offer-photo'>
-        <img src={img1}/>
+        <img src={image}/>
        </div>
        <div className='offer-text'>
          <div className='offer-sub-text'>

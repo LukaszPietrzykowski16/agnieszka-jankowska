@@ -4,16 +4,12 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
-  return (<>
-    <div className='oferta-baner'>
-      
-    </div>
+  return (
   <div className='contact'>
       <h1> Kontakt </h1>
       <p>  <FontAwesomeIcon icon={ faPhoneAlt  } />  Telefon: 725 209 990 </p>
       <p> <FontAwesomeIcon icon={ faEnvelope  } /> Email: f.f.agnieszkajankowska@gmail.com </p>
-  </div>
-  </>);
+  </div>);
 }
 
 export default Contact;
