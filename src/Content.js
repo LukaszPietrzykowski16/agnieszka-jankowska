@@ -2,14 +2,17 @@ import React from 'react';
 
 
 function Content() {
-  const text = ['Fotografia ślubna', 'Fotografia okolicznościowa', 'Chrzest Święty', 'Sesje plenerowe']
-  
   return (
   <div className='container'>
     <div className='container-text'>
         Agnieszka Jankowska
-        <div className='container-subtext'>
-        {text[0]}
+        <div className='scroller'>
+        Fotografia <span>
+          Ślubna<br/>
+          Okolicznościowa<br/>
+          Zjawiskowa<br/>
+          Profesjonalna
+        </span>
     </div>
     </div>
    

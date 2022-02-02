@@ -14,28 +14,26 @@ import img10 from './images/portfolio/IMG_7111.jpg';
 
 function Portfolio() {
   return (
-   
-      <Router>
+   <>
+    
         <div className='portfolio'>
-          <div className='sub-portfolio'> <Link to="/"> <img src={img3}/> Reportaż ślubny </Link> </div>
-          <div className='sub-portfolio'> <Link to="/"> <img src={img2}/> Plenerowe sesje ślubne </Link> </div>
-          <div className='sub-portfolio'> <Link to="/"> <img src={img4}/> Chrzest Święty - reportaż </Link> </div>
-          <div className='sub-portfolio'> <Link to="/"> <img src={img10}/> Chrzest Święty - plener </Link> </div>
-          <div className='sub-portfolio'> <Link to="/"> <img src={img6}/> Chrzest Święty - reportaż </Link> </div>
-          <div className='sub-portfolio'> <Link to="/"> <img src={img5}/> Chrzest Święta - plener </Link> </div>
-          <div className='sub-portfolio'> <Link to="/"> <img src={img7}/> Sesja portetowa </Link> </div>
-          <div className='sub-portfolio'> <Link to="/"> <img src={img8}/> Sesje rodzinne </Link> </div>
-          <div className='sub-portfolio'> <Link to="/"> <img src={img9}/> 18nastki </Link> </div>
+          <div className='sub-portfolio'> <Link to="/reportaz-slubny" > <img src={img3}/> Reportaż ślubny </Link> </div>
+          <div className='sub-portfolio'> <Link to="/plenerowe-sesje-slubne"> <img src={img2}/> Plenerowe sesje ślubne </Link> </div>
+          <div className='sub-portfolio'> <Link to="/chrzest-swiety-reportaz"> <img src={img4}/> Chrzest Święty - reportaż </Link> </div>
+          <div className='sub-portfolio'> <Link to="/chrzest-swiety-plener"> <img src={img10}/> Chrzest Święty - plener </Link> </div>
+          <div className='sub-portfolio'> <Link to="/chrzest-swiety-reportaz"> <img src={img6}/> Chrzest Święty - reportaż </Link> </div>
+          <div className='sub-portfolio'> <Link to="/chrzest-swiety-plener"> <img src={img5}/> Chrzest Święta - plener </Link> </div>
+          <div className='sub-portfolio'> <Link to="/sesja-portretowa"> <img src={img7}/> Sesja portetowa </Link> </div>
+          <div className='sub-portfolio'> <Link to="/sesje-rodzinne"> <img src={img8}/> Sesje rodzinne </Link> </div>
+          <div className='sub-portfolio'> <Link to="/osiemnastki"> <img src={img9}/> Osiemnastki </Link> </div>
         </div>
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/gallery" element={<Home />} />
-        </Routes>
+       
+           
         <div className='porfolio-button-div'>
         <button className='portfolio-button'> Zobacz portfolio </button>
         </div>
-    </Router>
-   
+  
+        </>
  );
 }
 

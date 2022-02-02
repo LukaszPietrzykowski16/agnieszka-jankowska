@@ -11,6 +11,7 @@ import Social from './Social';
 import Gallery from './Galeria';
 import Oferta from './Oferta';
 import Kontakt from './Kontakt';
+import Photos from './Photos';
 import Omnie from './OMnie';
 import Footerelement from './Footerelement';
 
@@ -41,6 +42,7 @@ function Navigation() {
             <Route path="/oferta" element={<Oferta />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/o-mnie" element={<Omnie />} />
+            <Route path="/reportaz-slubny" element={<Photos />} />
         </Routes>
     
     </Router>

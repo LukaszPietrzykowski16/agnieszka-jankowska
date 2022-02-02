@@ -39,6 +39,7 @@ a:visited {
   background-color: white;
   width: 100vw;
   z-index: 100;
+  box-shadow: 2px 2px purple;
 }
 
 .sub-nav {
@@ -80,6 +81,7 @@ a:visited {
   img {
     width: 100%;
   }
+  opacity: 1;
 }
 
 .about-text {
@@ -88,13 +90,39 @@ a:visited {
 }
 
 .container-text {
-  font-size: 5em;
+  font-size: 3em;
  
 }
-.container-subtext {
-  font-size: 0.5em;
-  text-align: center;
-}
+
+.scroller {
+    height: 1.2em;
+    line-height: 1.2em;
+    position: relative;
+    overflow: hidden;
+    width: 10em;
+  }
+
+  .scroller > span {
+    position: absolute;
+    top: 0;
+    animation: slide 8s infinite;
+    font-weight: bold;
+    
+  }
+  @keyframes slide {
+    0% {
+      top: 0;
+    }
+    25% {
+      top: -1.2em;
+    }
+    50% {
+      top: -2.4em;
+    }
+    75% {
+      top: -3.6em;
+    }
+  }
 
 
 
@@ -140,6 +168,18 @@ button {
   img {
     width: 100%;
   }
+  animation: newAnimation 8s infinite;
+  transition: all 2s;
+}
+
+@keyframes  newAnimation { 
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .offer-text{
@@ -154,12 +194,45 @@ button {
   text-align: center;
   justify-content: center;
   align-items: center;
-  
+  width: 60vw;
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 3em;
+    text-align: left;
+  }
+  svg {
+    color: purple;
+  }
 }
 
 .social {
   @include threeMagicLines();
+  width: 20vw;
+  svg {
+    font-size: 5em;
+  }
 }
+
+.social-fb{
+  color: 	#4267B2;
+  :hover {
+    color: 	#375694;
+    transition-duration: 1s;
+  }
+  
+}
+
+.social-ig{
+  // background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  color: 	#e1306c;
+  :hover {
+    color: 	#af2553;
+    transition-duration: 1s;
+  }
+}
+
 
 footer {
   display: flex wrap;

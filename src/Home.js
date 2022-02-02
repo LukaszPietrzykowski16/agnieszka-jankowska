@@ -12,7 +12,7 @@ function Home() {
     <>
      <Content />
    <About /> 
- 
+    <Portfolio />
    <Offer /> 
    <Contact />
    <Social />

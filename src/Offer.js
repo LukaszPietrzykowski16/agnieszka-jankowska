@@ -3,7 +3,7 @@ import img1 from './images/portfolio/7.jpg';
 import img2 from './images/portfolio/6.jpg';
 import img3 from './images/portfolio/13.jpg';
 import gsap from "gsap";
-
+// https://greensock.com/forums/topic/20618-how-to-add-dynamic-animated-sliders/
 function Offer() {
 
   const imageArray = [img1, img2, img3]
@@ -22,35 +22,33 @@ function Offer() {
        setIndex(0)
      }
      console.log(index)
-    }, 4000)
+    }, 8200)
     
     return () => {
       clearInterval(interval);
     }
   })
-
+/*
   useEffect(() => {
     const interval = setInterval(() => {
       gsap.to('.offer-photo', {
         opacity: 0,
-        duration: 2.0
        }) 
     }, 3000)
     
-   
-  })
+    
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
       gsap.to('.offer-photo', {
         opacity: 1,
-        duration: 2.0
        }) 
-    }, 5000)
-  
-  })
+    }, 4000)
+   
+  }, [])
 
- 
+ */
 
 
 
