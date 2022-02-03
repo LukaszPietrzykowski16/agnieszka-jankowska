@@ -17,15 +17,15 @@ function Portfolio() {
    <>
     
         <div className='portfolio'>
-          <div className='sub-portfolio'> <Link to="/reportaz-slubny" > <img src={img3}/> Reportaż ślubny </Link> </div>
-          <div className='sub-portfolio'> <Link to="/plenerowe-sesje-slubne"> <img src={img2}/> Plenerowe sesje ślubne </Link> </div>
-          <div className='sub-portfolio'> <Link to="/chrzest-swiety-reportaz"> <img src={img4}/> Chrzest Święty - reportaż </Link> </div>
-          <div className='sub-portfolio'> <Link to="/chrzest-swiety-plener"> <img src={img10}/> Chrzest Święty - plener </Link> </div>
-          <div className='sub-portfolio'> <Link to="/chrzest-swiety-reportaz"> <img src={img6}/> Chrzest Święty - reportaż </Link> </div>
-          <div className='sub-portfolio'> <Link to="/chrzest-swiety-plener"> <img src={img5}/> Chrzest Święta - plener </Link> </div>
-          <div className='sub-portfolio'> <Link to="/sesja-portretowa"> <img src={img7}/> Sesja portetowa </Link> </div>
-          <div className='sub-portfolio'> <Link to="/sesje-rodzinne"> <img src={img8}/> Sesje rodzinne </Link> </div>
-          <div className='sub-portfolio'> <Link to="/osiemnastki"> <img src={img9}/> Osiemnastki </Link> </div>
+          <div className='sub-portfolio'> <div className='more'> <button> more </button>  </div> <Link to="/reportaz-slubny" > <img src={img3}/><p>  Reportaż ślubny </p> </Link> </div>
+          <div className='sub-portfolio'> <div className='more'> <button> more </button>  </div>  <Link to="/plenerowe-sesje-slubne"> <img src={img2}/><p>  Plenerowe sesje ślubne </p> </Link> </div>
+          <div className='sub-portfolio'> <div className='more'> <button> more </button>  </div> <Link to="/chrzest-swiety-reportaz"> <img src={img4}/><p>  Chrzest Święty - reportaż</p> </Link> </div>
+          <div className='sub-portfolio'> <div className='more'> <button> more </button>  </div> <Link to="/chrzest-swiety-plener"> <img src={img10}/><p>  Chrzest Święty - plener</p> </Link> </div>
+          <div className='sub-portfolio'> <div className='more'> <button> more </button>  </div> <Link to="/chrzest-swiety-reportaz"> <img src={img6}/><p>  Chrzest Święty - reportaż</p> </Link> </div>
+          <div className='sub-portfolio'> <div className='more'> <button> more </button>  </div> <Link to="/chrzest-swiety-plener"> <img src={img5}/><p>  Chrzest Święta - plener </p> </Link> </div>
+          <div className='sub-portfolio'> <div className='more'> <button> more </button>  </div> <Link to="/sesja-portretowa"> <img src={img7}/> <p>  Sesja portetowa </p> </Link>  </div>
+          <div className='sub-portfolio'> <div className='more'> <button> more </button>  </div> <Link to="/sesje-rodzinne"> <img src={img8}/><p>  Sesje rodzinne </p> </Link> </div>
+          <div className='sub-portfolio'> <div className='more'> <button> more </button>  </div> <Link to="/osiemnastki"> <img src={img9}/><p>  Osiemnastki </p> </Link> </div>
         </div>
        
            

@@ -11,8 +11,8 @@ function Social() {
         <h1> Zapraszam na social media! </h1>
     </div>
      <div className='social'>
-        <div className='social-fb' href={"https://www.facebook.com/"} > <FontAwesomeIcon icon={ faFacebook }  /> </div>
-        <div className='social-ig'> <FontAwesomeIcon icon={ faInstagram } />  </div>
+        <div className='social-fb' > <FontAwesomeIcon icon={ faFacebook }  /> <p> Facebook </p> </div>
+        <div className='social-ig'> <FontAwesomeIcon icon={ faInstagram } /> <p> Instagram </p></div>
      </div>
      </>
  );

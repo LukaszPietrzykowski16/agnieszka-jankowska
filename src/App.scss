@@ -57,16 +57,19 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/images/IMG_9096a.jpg);
+  background-image: url(/images/IMG_9096ab.jpg);
+  background-color: rgb(106, 115, 218);
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: grayscale(10%);
+  color: white;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+
 }
 
 .about-section {
@@ -90,7 +93,7 @@ a:visited {
 }
 
 .container-text {
-  font-size: 3em;
+  font-size: 4em;
  
 }
 
@@ -99,14 +102,19 @@ a:visited {
     line-height: 1.2em;
     position: relative;
     overflow: hidden;
-    width: 10em;
+
+  }
+
+  .scroller {
+    font-size: 0.5em;
   }
 
   .scroller > span {
     position: absolute;
     top: 0;
     animation: slide 8s infinite;
-    font-weight: bold;
+    text-decoration: underline purple 3px;
+    
     
   }
   @keyframes slide {
@@ -136,6 +144,7 @@ a:visited {
 .sub-portfolio {
   width: 20vw;
   text-align: center;
+  position: relative;
   img {
     width: 100%;
   }
@@ -150,12 +159,56 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  filter: blur(0px) !important;
  
+}
+
+.sub-portfolio {
+  border-bottom: 1px solid purple;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  font-size: 1.2em;
+  
+  :hover {
+    filter: blur(1px);
+    transition-duration: 2s;
+    p {
+      filter: blur(0px) !important;
+    }
+    .more {
+      opacity: 1;
+      filter: blur(0px) !important;
+    }
+    
+  }
+}
+
+p {
+  filter: blur(0px) !important;
+}
+
+.more {
+ position: absolute;
+ left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -40px;
+  z-index: 1000;
+  opacity: 0;
+  filter: blur(0px) !important;
+ 
+} 
+
+.more:hover {
+  opacity: 1;
+  filter: blur(0px) !important;
 }
 
 .portfolio-button {
   @include threeMagicLines();
   margin-top: 10vh;
+  margin-bottom: 5vh;
 }
 
 .offer{
@@ -194,25 +247,50 @@ button {
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: 60vw;
+  background-image:  url(/images/IMG_9096ab.jpg);
+  background-color: rgb(106, 115, 218);
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   h1 {
     font-size: 2em;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
-  p {
-    font-size: 3em;
-    text-align: left;
-  }
+
+  
   svg {
     color: purple;
   }
 }
 
+.contact-subsection {
+  background-color: white;
+  color: black;
+  display: flex wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 40vh;
+  font-size: 3em;
+ 
+}
+
 .social {
   @include threeMagicLines();
-  width: 20vw;
+  width: 40vw;
   svg {
     font-size: 5em;
   }
+  padding-bottom: 40px;
+  
 }
 
 .social-fb{
@@ -220,8 +298,15 @@ button {
   :hover {
     color: 	#375694;
     transition-duration: 1s;
+    
   }
-  
+  p {
+    color:rgb(34, 34, 34);
+  }
+  border: 1px purple solid;
+  padding: 40px;
+  padding-right: 120px;
+  padding-left: 120px;
 }
 
 .social-ig{
@@ -231,6 +316,14 @@ button {
     color: 	#af2553;
     transition-duration: 1s;
   }
+  p {
+    color:rgb(34, 34, 34);
+    text-align: center;
+  }
+  border: 1px purple solid;
+  padding: 40px;
+  padding-right: 120px;
+  padding-left: 120px;
 }
 
 

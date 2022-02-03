@@ -10,9 +10,9 @@ import Social from './Social';
 function Home() {
   return (
     <>
-     <Content />
+   <Content />
    <About /> 
-    <Portfolio />
+   <Portfolio />
    <Offer /> 
    <Contact />
    <Social />
