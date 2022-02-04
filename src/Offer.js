@@ -21,7 +21,7 @@ function Offer() {
      if (index === imageArray.length - 1){
        setIndex(0)
      }
-     console.log(index)
+    
     }, 8200)
     
     return () => {

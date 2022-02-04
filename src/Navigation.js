@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.scss';
 import Home from './Home';
@@ -14,12 +14,24 @@ import Kontakt from './Kontakt';
 import Photos from './Photos';
 import Omnie from './OMnie';
 import Footerelement from './Footerelement';
+import logo from './images/logo.png';
 
 function Navigation() {
-  
-  const [navigation, setNabiagtion] = useState(true) 
+  // 1050px
+  const [size, setSize] = useState(window.innerWidth)
 
-  
+  const checkSize = () => {
+    setSize(window.innerWidth)
+    console.log(size)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', checkSize);
+    return () => {
+      window.removeEventListener('resize', checkSize);
+    }
+   
+  })
   
   return (
    <>
@@ -28,7 +40,7 @@ function Navigation() {
     <Router>
         <div className='navigation'>
         <div className='logo'>
-         There will be a logo
+        <img src={logo}/>
           </div>
           <div className='sub-nav'><Link to="/"> STRONA GŁÓWNA </Link> </div>
           <div className='sub-nav'><Link to="/gallery"> PORTFOLIO </Link> </div>

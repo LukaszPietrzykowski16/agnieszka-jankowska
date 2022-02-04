@@ -5,8 +5,15 @@
 }
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
 }
+
+
+
+$darkPink: #e4a8c1;
+$pink: #fbdeeb;
+$white: #ffffff;
+
 
 a:link{
   text-decoration: none;
@@ -39,7 +46,9 @@ a:visited {
   background-color: white;
   width: 100vw;
   z-index: 100;
-  box-shadow: 2px 2px purple;
+  box-shadow: 2px 2px $darkPink;
+  font-weight: bold;
+
 }
 
 .sub-nav {
@@ -48,7 +57,8 @@ a:visited {
 
 .sub-nav {
   :hover {
-    color: purple;
+    color: $darkPink;
+    transition-duration: 1s;
   }
   font-weight: 600;
 }
@@ -70,6 +80,18 @@ a:visited {
   background-size: cover;
 
 
+}
+
+.pink {
+  background-color: $pink;
+  
+}
+
+.header-one {
+  text-align: center;
+  color: $white;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .about-section {
@@ -113,7 +135,7 @@ a:visited {
     position: absolute;
     top: 0;
     animation: slide 8s infinite;
-    text-decoration: underline purple 3px;
+    text-decoration: underline $darkPink 3px;
     
     
   }
@@ -164,7 +186,7 @@ button {
 }
 
 .sub-portfolio {
-  border-bottom: 1px solid purple;
+  border-bottom: 1px solid $darkPink;
   padding-bottom: 10px;
   margin-bottom: 20px;
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
@@ -266,7 +288,7 @@ p {
 
   
   svg {
-    color: purple;
+    color: $darkPink;
   }
 }
 
@@ -295,6 +317,7 @@ p {
 
 .social-fb{
   color: 	#4267B2;
+  background-color: white;
   :hover {
     color: 	#375694;
     transition-duration: 1s;
@@ -303,7 +326,7 @@ p {
   p {
     color:rgb(34, 34, 34);
   }
-  border: 1px purple solid;
+  border: 1px $darkPink solid;
   padding: 40px;
   padding-right: 120px;
   padding-left: 120px;
@@ -312,6 +335,7 @@ p {
 .social-ig{
   // background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
   color: 	#e1306c;
+  background-color: white;
   :hover {
     color: 	#af2553;
     transition-duration: 1s;
@@ -320,7 +344,7 @@ p {
     color:rgb(34, 34, 34);
     text-align: center;
   }
-  border: 1px purple solid;
+  border: 1px $darkPink solid;
   padding: 40px;
   padding-right: 120px;
   padding-left: 120px;
@@ -338,8 +362,8 @@ footer {
 }
 
 .footer-up {
-  @include threeMagicLines();
- 
+  @include fourMagicLines();
+  text-align: center;
 }
 
 .footer-down {
