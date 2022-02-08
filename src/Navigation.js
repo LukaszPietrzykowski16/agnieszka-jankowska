@@ -17,22 +17,22 @@ import Footerelement from './Footerelement';
 import logo from './images/logo.png';
 
 function Navigation() {
-  // 1050px
-  const [size, setSize] = useState(window.innerWidth)
+  
+  const [menu, setMenu] = useState(false);
 
-  const checkSize = () => {
-    setSize(window.innerWidth)
-    console.log(size)
+  const hideMenu = (menu) => {
+    if (menu === true) {
+      setMenu(false);
+    } else {
+      setMenu(true);
+    }
+    
   }
 
-  useEffect(() => {
-    window.addEventListener('resize', checkSize);
-    return () => {
-      window.removeEventListener('resize', checkSize);
-    }
-   
-  })
+  console.log(menu)
+
   
+
   return (
    <>
  
@@ -41,12 +41,26 @@ function Navigation() {
         <div className='navigation'>
         <div className='logo'>
         <img src={logo}/>
-          </div>
+        </div>
+        <div className='navigation-desktop'>
           <div className='sub-nav'><Link to="/"> STRONA GŁÓWNA </Link> </div>
           <div className='sub-nav'><Link to="/gallery"> PORTFOLIO </Link> </div>
           <div className='sub-nav'><Link to="/oferta"> OFERTA </Link> </div>
           <div className='sub-nav'><Link to="/kontakt"> KONTAKT </Link> </div>
           <div className='sub-nav'><Link to="/o-mnie"> O MNIE </Link> </div>
+        </div>
+
+        <div className='navigation-mobile'>
+          <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}> BRUH </div>
+          <div className={menu ?  "menu-open": "menu-close"}>
+            <div className='sub-nav-mobile'><Link to="/"> STRONA GŁÓWNA </Link> </div>
+            <div className='sub-nav-mobile'><Link to="/gallery"> PORTFOLIO </Link> </div>
+            <div className='sub-nav-mobile'><Link to="/oferta"> OFERTA </Link> </div>
+            <div className='sub-nav-mobile'><Link to="/kontakt"> KONTAKT </Link> </div>
+            <div className='sub-nav-mobile'><Link to="/o-mnie"> O MNIE </Link> </div>
+          </div>
+        </div>
+        
         </div>
         <Routes>
             <Route path="/" element={<Home />} />

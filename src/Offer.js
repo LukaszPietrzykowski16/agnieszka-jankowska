@@ -16,13 +16,13 @@ function Offer() {
     const interval = setInterval(() => {
       
     
-      setIndex( index + 1)
+     setIndex( index + 1)
      setImage(imageArray[index])
      if (index === imageArray.length - 1){
        setIndex(0)
      }
     
-    }, 8200)
+    }, 8100)
     
     return () => {
       clearInterval(interval);
