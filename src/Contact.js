@@ -9,8 +9,8 @@ function Contact() {
   <div className='contact'>
       <h1> KONTAKT </h1>
       <div className='contact-subsection'>
-        <p>  <FontAwesomeIcon icon={ faPhoneAlt  } />  Telefon: </p> <p>  725 209 990 </p>
-        <p> <FontAwesomeIcon icon={ faEnvelope  } /> Email: f.f.agnieszkajankowska@gmail.com </p>
+        <div className='contact-phone'>  <FontAwesomeIcon icon={ faPhoneAlt  } /> Telefon:  725 209 990  </div>
+        <div className='contact-email'> <FontAwesomeIcon icon={ faEnvelope  } /> Email: f.f.agnieszkajankowska@gmail.com  </div>
       </div>
       
   </div>);

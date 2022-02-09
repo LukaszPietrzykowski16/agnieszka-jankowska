@@ -12,12 +12,30 @@ $darkPink: #e4a8c1;
 $pink: #fbdeeb;
 $white: #ffffff;
 
+@mixin threeMagicLines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fourMagicLines {
+  display: flex wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 .menu-close {
   display: none;
 }
 
+.policy {
+  color: rgb(129, 128, 128);
+  font-size: 0.8em;
+  padding-top: 40px;
+}
 .menu-open {
   position: absolute;
   display: flex wrap;
@@ -37,6 +55,10 @@ $white: #ffffff;
   0%   {left: 600px;}
   100% {left: 0px;}
 }
+
+
+
+
 .sub-nav-mobile {
   background-color: white;
   padding-top: 20px;
@@ -55,18 +77,56 @@ a:visited {
   
 }
 
-@mixin threeMagicLines {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+.social {
+ 
+  @include threeMagicLines();
+  svg {
+    font-size: 5em;
+  }
+  padding-bottom: 40px;
+  width: 50vw;
 }
 
-@mixin fourMagicLines {
-  display: flex wrap;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.social-fb{
+  color: 	#4267B2;
+  text-align: center;
+  background-color: white;
+  :hover {
+    color: 	#375694;
+    transition-duration: 1s;
+    
+  }
+  p {
+    color:rgb(34, 34, 34);
+    text-align: center;
+  }
+  border: 1px $darkPink solid;
+  width: 20vw;
+  height: 20vh;
+  padding-top: 40px;
 }
+
+.social-ig{
+  // background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  color: 	#e1306c;
+  background-color: white;
+  text-align: center;
+  :hover {
+    color: 	#af2553;
+    transition-duration: 1s;
+  }
+  p {
+    color:rgb(34, 34, 34);
+    text-align: center;
+  }
+  border: 1px $darkPink solid;
+  width: 20vw;
+  height: 20vh;
+  padding-top: 40px;
+}
+
 
 .navigation {
   @include threeMagicLines();
@@ -404,56 +464,14 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   width: 80vw;
   height: 40vh;
   font-size: 3em;
  
 }
 
-.social {
-  @include threeMagicLines();
-  width: 40vw;
-  svg {
-    font-size: 5em;
-  }
-  padding-bottom: 40px;
-  
-}
-
-.social-fb{
-  color: 	#4267B2;
-  background-color: white;
-  :hover {
-    color: 	#375694;
-    transition-duration: 1s;
-    
-  }
-  p {
-    color:rgb(34, 34, 34);
-  }
-  border: 1px $darkPink solid;
-  padding: 40px;
-  padding-right: 120px;
-  padding-left: 120px;
-}
-
-.social-ig{
-  // background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-  color: 	#e1306c;
-  background-color: white;
-  :hover {
-    color: 	#af2553;
-    transition-duration: 1s;
-  }
-  p {
-    color:rgb(34, 34, 34);
-    text-align: center;
-  }
-  border: 1px $darkPink solid;
-  padding: 40px;
-  padding-right: 120px;
-  padding-left: 120px;
-}
 
 
 footer {
@@ -464,6 +482,19 @@ footer {
   background-color: rgb(34, 34, 34);
  
   color: white;
+}
+
+.footer-class{
+  img {
+    width: 20%;
+  }
+  padding-top: 40px;
+}
+
+.social-footer {
+  color: #fbdeeb;
+  font-size: 2.0em;
+  padding-bottom: 20px;
 }
 
 .footer-up {
@@ -500,6 +531,23 @@ footer {
     display: none !important;
   }
 
+  .social {
+    display: block;
+    width: 90vw;
+  }
+
+  .footer-class{
+    img {
+      width: 70%;
+    }
+  }
+
+  .social-ig {
+    width: 70vw;
+  }
+  .social-fb {
+    width: 70vw;
+  }
   
   .navigation-mobile{
     @include threeMagicLines();
@@ -507,7 +555,7 @@ footer {
   
 
   .contact-subsection {
-    
+    @include threeMagicLines();
     width: 80vw;
     height: 40vh;
     font-size: 1.8em;
@@ -517,6 +565,9 @@ footer {
 }
 
 @media (max-width: 500px) {
+  
+  
+  
   .about-section {
     @include fourMagicLines();
     width: 90vw;
@@ -584,22 +635,14 @@ footer {
   }
 
   .contact-subsection {
-    
+    @include threeMagicLines();
     width: 90vw;
     height: 40vh;
     font-size: 1.2em;
    
   }
 
-  .social {
-    @include fourMagicLines();
-    width: 40vw;
-    svg {
-      font-size: 5em;
-    }
-    padding-bottom: 40px;
-    
-  }
+  
 }
 
 
