@@ -77,6 +77,30 @@ a:visited {
   
 }
 
+.test-gallery{
+  @include fourMagicLines();
+}
+
+.test-gallery-subsection {
+  @include threeMagicLines();
+  width: 60vw;
+  border: 1px solid $darkPink;
+  margin-top: 20px;
+}
+
+.test-gallery-subsection-img {
+  width: 100vw;
+  img{
+    width: 100%;
+  }
+}
+
+.test-gallery-subsection-txt {
+  @include threeMagicLines();
+  width: 100vw;
+  
+
+}
 
 
 .social {
@@ -491,6 +515,8 @@ footer {
   padding-top: 40px;
 }
 
+
+
 .social-footer {
   color: #fbdeeb;
   font-size: 2.0em;
@@ -515,7 +541,10 @@ footer {
 
 .photo-oferta, .photo-img {
   @include threeMagicLines();
-  width: 90vw;
+  width: 50vw; 
+  img {
+    width: 100%;
+  }
 }
 
 .navigation-desktop {
@@ -530,6 +559,14 @@ footer {
   .navigation-desktop {
     display: none !important;
   }
+
+  .test-gallery-subsection {
+    @include fourMagicLines();
+    width: 60vw;
+    border: 1px solid $darkPink;
+    margin-top: 20px;
+  }
+
 
   .social {
     display: block;
