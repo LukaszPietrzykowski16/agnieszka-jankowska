@@ -98,6 +98,8 @@ a:visited {
 .test-gallery-subsection-txt {
   @include threeMagicLines();
   width: 100vw;
+  padding-left: 10px;
+  
   
 
 }
@@ -562,7 +564,7 @@ footer {
 
   .test-gallery-subsection {
     @include fourMagicLines();
-    width: 60vw;
+    width: 80vw;
     border: 1px solid $darkPink;
     margin-top: 20px;
   }

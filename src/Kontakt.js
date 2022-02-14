@@ -8,21 +8,29 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 function Kontakt() {
   return (
       <>
-    <div className='oferta-baner'>
+<div className='contact'>
+      <h1> KONTAKT </h1>
+      <div className='contact-subsection'>
+        <div className='contact-phone'>  <FontAwesomeIcon icon={ faPhoneAlt  } /> Telefon:  725 209 990  </div>
+        <div className='contact-email'> <FontAwesomeIcon icon={ faEnvelope  } /> Email: f.f.agnieszkajankowska@gmail.com  </div>
+      </div>
       
-    </div>
-      <div className='contact'>
-      <h1> Kontakt </h1>
-      <p>  <FontAwesomeIcon icon={ faPhoneAlt  } />  Telefon: 725 209 990 </p>
-      <p> <FontAwesomeIcon icon={ faEnvelope  } /> Email: f.f.agnieszkajankowska@gmail.com </p>
   </div>
-  <div className='portfolio-button'>
-        <h1> Zapraszam na social media! </h1>
+
+    <div className='form'>
+    <form>
+  <label>
+    Imię:
+    <input type="text" name="name" />
+  </label>
+  <label>
+    E-mail:
+    <input type="text" name="name" />
+  </label>
+  <input type="submit" value="Wyślij" />
+</form>
     </div>
-     <div className='social'>
-        <div className='social-fb'> fb <FontAwesomeIcon icon={ faFacebook } /> </div>
-        <div className='social-ig'> ig <FontAwesomeIcon icon={ faInstagram } />  </div>
-     </div>
+   
   </>);
 }
 

@@ -18,7 +18,7 @@ function About() {
     duration: 1.5
   })
         
-})
+}, [])
 
 useEffect(() => {
      
