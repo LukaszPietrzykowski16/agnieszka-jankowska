@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.scss';
 import Home from './Home';
@@ -16,6 +16,10 @@ import Omnie from './OMnie';
 import Footerelement from './Footerelement';
 import logo from './images/logo.png';
 
+import gsap from 'gsap';
+import {Power4} from 'gsap';
+import Reportaz from './Reportaz';
+
 function Navigation() {
   
   const [menu, setMenu] = useState(false);
@@ -28,10 +32,19 @@ function Navigation() {
     }
     
   }
-
-  console.log(menu)
-
   
+  function animation() {
+      gsap.to('.transition-effect', {
+        duration: 5,
+        x: 2700,
+        ease: Power4.easeOut,
+        opacity: 0
+    })
+    console.log('bruh')
+    
+  }
+  
+
 
   return (
    <>
@@ -43,7 +56,7 @@ function Navigation() {
         <img src={logo}/>
         </div>
         <div className='navigation-desktop'>
-          <div className='sub-nav'><Link to="/"> STRONA GŁÓWNA </Link> </div>
+          <div className='sub-nav' onClick={() => animation}><Link to="/"> STRONA GŁÓWNA </Link> </div>
           <div className='sub-nav'><Link to="/gallery"> PORTFOLIO </Link> </div>
           <div className='sub-nav'><Link to="/oferta"> OFERTA </Link> </div>
           <div className='sub-nav'><Link to="/kontakt"> KONTAKT </Link> </div>
@@ -68,7 +81,7 @@ function Navigation() {
             <Route path="/oferta" element={<Oferta />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/o-mnie" element={<Omnie />} />
-            <Route path="/reportaz-slubny" element={<Photos />} />
+            <Route path="/reportaz-slubny" element={<Reportaz />} />
         </Routes>
     
     </Router>

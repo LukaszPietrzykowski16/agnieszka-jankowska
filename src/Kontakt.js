@@ -5,6 +5,7 @@ import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
+
 function Kontakt() {
   return (
       <>
