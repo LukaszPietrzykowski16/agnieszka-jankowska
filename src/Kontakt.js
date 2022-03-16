@@ -18,16 +18,19 @@ function Kontakt() {
       
   </div>
 
-    <div className='form'>
+    <div className='form-contant'>
+      
     <form>
+    <h1> Skontaktuj się ze mną! </h1>
   <label>
-    Imię:
+    <h3> Imię: </h3>
     <input type="text" name="name" />
   </label>
   <label>
-    E-mail:
+  <h3> Email: </h3>
     <input type="text" name="name" />
   </label>
+  <textarea>  </textarea>
   <input type="submit" value="Wyślij" />
 </form>
     </div>

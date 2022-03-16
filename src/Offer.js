@@ -1,17 +1,22 @@
 import React, {useState, useEffect} from 'react';
-import img1 from './images/portfolio/7.jpg';
-import img2 from './images/portfolio/6.jpg';
-import img3 from './images/portfolio/13.jpg';
-import gsap from "gsap";
+import img1 from './images/portfolio/offer/img1.jpg';
+import img2 from './images/portfolio/offer/img2.jpg';
+import img3 from './images/portfolio/offer/img3.jpg';
+import img4 from './images/portfolio/offer/img4.jpg';
+import img5 from './images/portfolio/offer/img5.jpg';
+import img6 from './images/portfolio/offer/img6.jpg';
+import { Transition } from 'react-transition-group';
+
 // https://greensock.com/forums/topic/20618-how-to-add-dynamic-animated-sliders/
 function Offer() {
 
-  const imageArray = [img1, img2, img3]
+  const imageArray = [img1, img2, img3, img4, img5, img6]
 
   const [index, setIndex] = useState(0);
   
   const [image, setImage] = useState(imageArray[index])
  
+
   useEffect(() => {
     const interval = setInterval(() => {
       
@@ -21,34 +26,14 @@ function Offer() {
      if (index === imageArray.length - 1){
        setIndex(0)
      }
-    
+
     }, 8100)
     
     return () => {
       clearInterval(interval);
     }
+    
   })
-/*
-  useEffect(() => {
-    const interval = setInterval(() => {
-      gsap.to('.offer-photo', {
-        opacity: 0,
-       }) 
-    }, 3000)
-    
-    
-  }, [])
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      gsap.to('.offer-photo', {
-        opacity: 1,
-       }) 
-    }, 4000)
-   
-  }, [])
-
- */
 
 
 

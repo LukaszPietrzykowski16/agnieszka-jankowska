@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 $darkPink: #e4a8c1;
@@ -24,8 +24,6 @@ $white: #ffffff;
   justify-content: center;
   align-items: center;
 }
-
-
 
 .menu-close {
   display: none;
@@ -50,14 +48,14 @@ $white: #ffffff;
   animation: slideIn 2s;
 }
 
-
 @keyframes slideIn {
-  0%   {left: 600px;}
-  100% {left: 0px;}
+  0% {
+    left: 600px;
+  }
+  100% {
+    left: 0px;
+  }
 }
-
-
-
 
 .sub-nav-mobile {
   background-color: white;
@@ -65,19 +63,17 @@ $white: #ffffff;
   padding-bottom: 20px;
 }
 
-a:link{
+a:link {
   text-decoration: none;
   color: black;
- 
 }
 
 a:visited {
   text-decoration: none;
   color: black;
-  
 }
 
-.test-gallery{
+.test-gallery {
   @include fourMagicLines();
 }
 
@@ -90,7 +86,7 @@ a:visited {
 
 .test-gallery-subsection-img {
   width: 100vw;
-  img{
+  img {
     width: 100%;
   }
 }
@@ -108,14 +104,9 @@ a:visited {
   @include threeMagicLines();
   width: 100vw;
   padding-left: 10px;
-  
-  
-
 }
 
-
 .social {
- 
   @include threeMagicLines();
   svg {
     font-size: 5em;
@@ -124,17 +115,16 @@ a:visited {
   width: 50vw;
 }
 
-.social-fb{
-  color: 	#4267B2;
+.social-fb {
+  color: #4267b2;
   text-align: center;
   background-color: white;
   :hover {
-    color: 	#375694;
+    color: #375694;
     transition-duration: 1s;
-    
   }
   p {
-    color:rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
     text-align: center;
   }
   border: 1px $darkPink solid;
@@ -143,17 +133,17 @@ a:visited {
   padding-top: 40px;
 }
 
-.social-ig{
+.social-ig {
   // background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-  color: 	#e1306c;
+  color: #e1306c;
   background-color: white;
   text-align: center;
   :hover {
-    color: 	#af2553;
+    color: #af2553;
     transition-duration: 1s;
   }
   p {
-    color:rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
     text-align: center;
   }
   border: 1px $darkPink solid;
@@ -161,7 +151,6 @@ a:visited {
   height: 20vh;
   padding-top: 40px;
 }
-
 
 .navigation {
   @include threeMagicLines();
@@ -171,7 +160,6 @@ a:visited {
   z-index: 100;
   box-shadow: 2px 2px $darkPink;
   font-weight: bold;
-
 }
 
 .sub-nav {
@@ -186,12 +174,12 @@ a:visited {
   font-weight: 600;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url(/images/IMG_9096ab.jpg);
-  background-color: rgb(106, 115, 218);
+  background-color: $pink;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
@@ -201,13 +189,10 @@ a:visited {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-
 }
 
 .pink {
   background-color: $pink;
-  
 }
 
 .header-one {
@@ -220,10 +205,9 @@ a:visited {
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
   }
-
 }
 
-.logo  {
+.logo {
   width: 20%;
   img {
     width: 100%;
@@ -252,51 +236,86 @@ a:visited {
 
 .container-text {
   font-size: 4em;
- 
 }
 
 .scroller {
-    height: 1.2em;
-    line-height: 1.2em;
-    position: relative;
-    overflow: hidden;
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+}
 
-  }
+.scroller {
+  font-size: 0.5em;
+}
 
-  .scroller {
-    font-size: 0.5em;
-  }
-
-  .scroller > span {
-    position: absolute;
+.scroller > span {
+  position: absolute;
+  top: 0;
+  animation: slide 8s infinite;
+  text-decoration: underline $darkPink 3px;
+}
+@keyframes slide {
+  0% {
     top: 0;
-    animation: slide 8s infinite;
-    text-decoration: underline $darkPink 3px;
-    
-    
   }
-  @keyframes slide {
-    0% {
-      top: 0;
-    }
-    25% {
-      top: -1.2em;
-    }
-    50% {
-      top: -2.4em;
-    }
-    75% {
-      top: -3.6em;
-    }
+  25% {
+    top: -1.2em;
   }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
+  }
+}
 
-
-
-.portfolio{
+.portfolio {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 70vw;
+}
 
+.form-contant {
+  @include threeMagicLines();
+  width: 80vw;
+  padding: 10vh;
+}
+
+input[type="text"] {
+  border: 2px solid $darkPink;
+  border-radius: 4px;
+  width: 100%;
+  padding: 20px;
+}
+
+input[type="text"]:focus {
+  border: 3px solid $darkPink;
+}
+
+input[type="submit"] {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  margin-top: 1em;
+  padding: 1em 2em;
+  background-color: $pink;
+  box-shadow: inset 0 0 0 1px black;
+  color: black;
+  font-size: inherit;
+}
+
+textarea {
+  margin-top: 20px;
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid $darkPink;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
 }
 
 .sub-portfolio {
@@ -315,8 +334,7 @@ button {
   margin: 1em;
   padding: 1em 2em;
   background-color: $pink;
- 
-  
+
   // Using inset box-shadow instead of border for sizing simplicity
   box-shadow: inset 0 0 0 1px black;
   color: black;
@@ -330,12 +348,11 @@ button {
   &::before,
   &::after {
     box-sizing: inherit;
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
   }
- 
 }
 
 .porfolio-button-div {
@@ -360,20 +377,20 @@ button {
 
   // scale3d(<scale-horizontal>, <scale-vertical>, <scale-depth>);
   &::before {
-    border-top: 1px solid  $darkPink;
-    border-bottom: 1px solid  $darkPink;
-    transform: scale3d(0,1,1); // Shrink only width
+    border-top: 1px solid $darkPink;
+    border-bottom: 1px solid $darkPink;
+    transform: scale3d(0, 1, 1); // Shrink only width
   }
 
   &::after {
-    border-left: 1px solid  $darkPink;
-    border-right: 1px solid  $darkPink;
-    transform: scale3d(1,0,1); // Shrink only height
+    border-left: 1px solid $darkPink;
+    border-right: 1px solid $darkPink;
+    transform: scale3d(1, 0, 1); // Shrink only height
   }
 
   &:hover::before,
   &:hover::after {
-    transform: scale3d(1,1,1); // Show full-size
+    transform: scale3d(1, 1, 1); // Show full-size
     transition: transform 0.5s;
   }
 }
@@ -384,42 +401,33 @@ button {
   margin-bottom: 20px;
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   font-size: 1.2em;
-  
+
   :hover {
     filter: blur(1px);
     transition-duration: 2s;
-
-    
   }
 }
 
-
 .more {
-  position: absolute;   
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
   opacity: 0;
   padding: 4px 12px 4px 12px;
-  transition: all 0.8s ease;  
+  transition: all 0.8s ease;
   color: white;
   background-color: $darkPink;
   font-size: 1.5em;
   pointer-events: none;
   //-webkit-text-stroke-width: 2px;
   //-webkit-text-stroke-color: black;
-} 
-
+}
 
 .sub-portfolio:hover .more {
   opacity: 1;
-  
 }
-
-
-
-
 
 .gallery-open {
   position: fixed;
@@ -437,20 +445,18 @@ button {
   width: 80%;
 }
 
-.exit{
+.exit {
   position: fixed;
   bottom: 0;
   right: 0;
   top: 0;
   margin: 20px;
-  
 }
 
 .left-arrow {
   position: fixed;
   left: 0;
   margin: 20px;
-
 }
 
 .right-arrow {
@@ -459,8 +465,17 @@ button {
   margin: 20px;
 }
 
+.gallery-open {
+  background-color: rgb(51, 48, 48, 0.8);
+  color: white;
+}
+
 .gallery-open img {
   opacity: 1;
+  height: auto;
+  width: auto;
+  max-height: 100vh;
+  max-width: 100vw;
 }
 .gallery-close {
   display: none;
@@ -474,28 +489,35 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  :hover {
+    transform: scale(1.02);
+  }
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    transition: all 0.25s;
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
   }
 }
-
 
 @media (min-width: 640px) {
   .gallery-portfolio {
     width: 80vw;
     margin: auto;
     display: grid;
-    grid-template-columns:(2, 1fr);
-    grid-template-rows: repeat(5, 400px);
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: repeat(5, 500px);
     grid-auto-flow: row dense;
   }
   .pic {
     margin: 0.7rem;
   }
   .pic:first-child {
-   grid-row: span 1;
+    grid-row: span 1;
   }
 
   .pic:nth-child(2) {
@@ -503,14 +525,17 @@ button {
     grid-row: span 3;
   }
 
-  .pic:nth-child(2), 
+  .pic:nth-child(2),
   .pic:nth-child(8) {
     grid-row: span 2;
   }
-  
 }
 
-
+@media (max-width: 640px) {
+  .pic {
+    margin: 0.7rem;
+  }
+}
 
 .portfolio-button {
   @include threeMagicLines();
@@ -518,7 +543,7 @@ button {
   margin-bottom: 5vh;
 }
 
-.offer{
+.offer {
   @include threeMagicLines();
   margin-top: 10vh;
 }
@@ -528,11 +553,9 @@ button {
   img {
     width: 100%;
   }
-  // transition: all 2s;
-  animation: newAnimation 8s infinite;
 }
 
-@keyframes  newAnimation { 
+@keyframes newAnimation {
   0% {
     opacity: 1;
   }
@@ -540,7 +563,7 @@ button {
   100% {
     opacity: 0;
   }
-  
+
   0% {
     opacity: 0;
   }
@@ -550,9 +573,7 @@ button {
   }
 }
 
-
-
-.offer-text{
+.offer-text {
   width: 70vw;
 }
 .offer-sub-text {
@@ -564,7 +585,7 @@ button {
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-image:  url(/images/IMG_9096ab.jpg);
+  background-image: url(/images/IMG_9096ab.jpg);
   background-color: rgb(106, 115, 218);
   height: 70vh;
   background-position: center;
@@ -581,7 +602,6 @@ button {
     padding-bottom: 40px;
   }
 
-  
   svg {
     color: $darkPink;
   }
@@ -599,10 +619,7 @@ button {
   width: 80vw;
   height: 40vh;
   font-size: 3em;
- 
 }
-
-
 
 footer {
   display: flex wrap;
@@ -610,22 +627,20 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   background-color: rgb(34, 34, 34);
- 
+
   color: white;
 }
 
-.footer-class{
+.footer-class {
   img {
     width: 20%;
   }
   padding-top: 40px;
 }
 
-
-
 .social-footer {
   color: #fbdeeb;
-  font-size: 2.0em;
+  font-size: 2em;
   padding-bottom: 20px;
 }
 
@@ -645,9 +660,10 @@ footer {
   height: 30vh;
 }
 
-.photo-oferta, .photo-img {
+.photo-oferta,
+.photo-img {
   @include threeMagicLines();
-  width: 50vw; 
+  width: 50vw;
   img {
     width: 100%;
   }
@@ -657,7 +673,7 @@ footer {
   @include threeMagicLines();
 }
 
-.navigation-mobile{
+.navigation-mobile {
   display: none;
 }
 
@@ -673,13 +689,12 @@ footer {
     margin-top: 20px;
   }
 
-
   .social {
     display: block;
     width: 90vw;
   }
 
-  .footer-class{
+  .footer-class {
     img {
       width: 70%;
     }
@@ -691,26 +706,20 @@ footer {
   .social-fb {
     width: 70vw;
   }
-  
-  .navigation-mobile{
+
+  .navigation-mobile {
     @include threeMagicLines();
   }
-  
 
   .contact-subsection {
     @include threeMagicLines();
     width: 80vw;
     height: 40vh;
     font-size: 1.8em;
-   
   }
-
 }
 
 @media (max-width: 500px) {
-  
-  
-  
   .about-section {
     @include fourMagicLines();
     width: 90vw;
@@ -718,17 +727,15 @@ footer {
     margin-bottom: 20vh;
   }
 
-  .logo  {
+  .logo {
     width: 50%;
     img {
       width: 100%;
     }
   }
-  
 
   .container-text {
     font-size: 2em;
-   
   }
 
   .about-photo {
@@ -737,19 +744,18 @@ footer {
       width: 100%;
     }
   }
-  
+
   .about-text {
     width: 90vw;
     margin: 20px;
   }
 
-  .portfolio{
+  .portfolio {
     display: grid;
     grid-template-columns: 1fr;
     width: 90vw;
-  
   }
-  
+
   .sub-portfolio {
     width: 80vw;
     text-align: center;
@@ -758,19 +764,19 @@ footer {
     }
   }
 
-  .offer{
+  .offer {
     @include fourMagicLines();
     margin-top: 10vh;
   }
-  
+
   .offer-photo {
     width: 70vw;
     img {
       width: 100%;
     }
   }
-  
-  .offer-text{
+
+  .offer-text {
     width: 70vw;
   }
   .offer-sub-text {
@@ -782,13 +788,5 @@ footer {
     width: 90vw;
     height: 40vh;
     font-size: 1.2em;
-   
   }
-
-  
 }
-
-
-
-
-
