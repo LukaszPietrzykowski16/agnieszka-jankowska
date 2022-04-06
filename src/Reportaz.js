@@ -1,5 +1,8 @@
 import React, { useState}  from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './App.scss';
+
+import { faArrowLeft, faXRay, faArrowRight, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import img0 from './images/portfolio/reportaz-slubny/img0.jpg';
 import img1 from './images/portfolio/reportaz-slubny/img1.jpg';
 import img2 from './images/portfolio/reportaz-slubny/img2.jpg';
@@ -215,9 +218,9 @@ const Reportaz = () => {
         <>
          <div className={lightbox ? "gallery-open": "gallery-close"} >
             <img src={image[index]}/>
-            <div className='exit' onClick={() => hideGallery(lightbox)}> x </div>
-            <div className='left-arrow' onClick={() =>  leftSlide(index)}> LEWO </div>
-            <div className='right-arrow' onClick={() => rightSlide(index)}> PRAWO </div>
+            <div className='exit' onClick={() => hideGallery(lightbox)}> <FontAwesomeIcon icon={ faTimesCircle }/> </div>
+            <div className='left-arrow' onClick={() =>  leftSlide(index)}>  <FontAwesomeIcon icon={ faArrowLeft }/> </div>
+            <div className='right-arrow' onClick={() => rightSlide(index)}>  <FontAwesomeIcon icon={ faArrowRight  }/> </div>
         </div>
         <div className='gallery-portfolio'>
         {imageList.map((singlePhoto) => {

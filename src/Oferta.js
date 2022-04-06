@@ -1,7 +1,28 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import img4 from './images/portfolio/7.jpg';
+import  gsap  from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
 
 export default function Oferta() {
+    /*
+    gsap.registerPlugin(ScrollTrigger);
+ 
+
+    useEffect(() => {   
+    gsap.from('.photo-oferta', {scrollTrigger: {
+      trigger: '.photo-oferta',
+      toggleActions: 'restart pause restart pause'},
+      y: 80,
+      opacity: 0,
+      duration: 1.5
+    })
+          
+  }, [])
+  */
+
+
   return (<>
   <div className='oferta-baner'>
       

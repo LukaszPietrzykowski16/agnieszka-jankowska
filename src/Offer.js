@@ -6,8 +6,10 @@ import img4 from './images/portfolio/offer/img4.jpg';
 import img5 from './images/portfolio/offer/img5.jpg';
 import img6 from './images/portfolio/offer/img6.jpg';
 import { Transition } from 'react-transition-group';
+// import { gsap, TimelineMax } from 'gsap';
 
 // https://greensock.com/forums/topic/20618-how-to-add-dynamic-animated-sliders/
+// https://stackoverflow.com/questions/55597102/react-state-hook-toggle-a-class
 function Offer() {
 
   const imageArray = [img1, img2, img3, img4, img5, img6]
@@ -16,18 +18,37 @@ function Offer() {
   
   const [image, setImage] = useState(imageArray[index])
  
-
+  const [fadingimg, setFading] = useState(true)
+  
   useEffect(() => {
     const interval = setInterval(() => {
-      
     
      setIndex( index + 1)
      setImage(imageArray[index])
+   
+  
+      
+    fadingimg === true ? setFading(false) : setFading(true)
+      
+        /*
+     const [menu, setMenu] = useState(false);
+
+
+     const hideMenu = (menu) => {
+       if (menu === true) {
+         setMenu(false);
+       } else {
+         setMenu(true);
+       }
+       
+     }
+
+*/
      if (index === imageArray.length - 1){
        setIndex(0)
      }
 
-    }, 8100)
+    }, 2000)
     
     return () => {
       clearInterval(interval);
@@ -39,7 +60,7 @@ function Offer() {
 
   return (
   <div className='offer'>
-       <div className='offer-photo'>
+       <div className={setFading === true ? 'offer-photo active' : 'offer-photo hide'}>
         <img src={image}/>
        </div>
        <div className='offer-text'>

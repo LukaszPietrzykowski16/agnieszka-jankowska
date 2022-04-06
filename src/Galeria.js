@@ -50,7 +50,7 @@ export default function Galeria() {
     </div>
     </Link>
    
-    <div className='test-gallery-subsection'>
+    <div className='test-gallery-subsection-reverse'>
 
     
     <div className='test-gallery-subsection-txt'>
@@ -79,7 +79,7 @@ export default function Galeria() {
       </div>
     </div>
 
-    <div className='test-gallery-subsection'>
+    <div className='test-gallery-subsection-reverse'>
      
       <div className='test-gallery-subsection-txt'>
     
@@ -104,7 +104,7 @@ export default function Galeria() {
       </div>
     </div>
 
-    <div className='test-gallery-subsection'>
+    <div className='test-gallery-subsection-reverse'>
     
       <div className='test-gallery-subsection-txt'>
     

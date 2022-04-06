@@ -66,11 +66,11 @@ function Navigation() {
         <div className='navigation-mobile'>
           <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}> BRUH </div>
           <div className={menu ?  "menu-open": "menu-close"}>
-            <div className='sub-nav-mobile'><Link to="/"> STRONA GŁÓWNA </Link> </div>
-            <div className='sub-nav-mobile'><Link to="/gallery"> PORTFOLIO </Link> </div>
-            <div className='sub-nav-mobile'><Link to="/oferta"> OFERTA </Link> </div>
-            <div className='sub-nav-mobile'><Link to="/kontakt"> KONTAKT </Link> </div>
-            <div className='sub-nav-mobile'><Link to="/o-mnie"> O MNIE </Link> </div>
+            <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}><Link to="/"> STRONA GŁÓWNA </Link> </div>
+            <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}><Link to="/gallery"> PORTFOLIO </Link> </div>
+            <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}><Link to="/oferta"> OFERTA </Link> </div>
+            <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}><Link to="/kontakt"> KONTAKT </Link> </div>
+            <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}><Link to="/o-mnie"> O MNIE </Link> </div>
           </div>
         </div>
         
