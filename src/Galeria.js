@@ -32,6 +32,19 @@ export default function Galeria() {
           
   }, [])
 
+  useEffect(() => {
+     
+    gsap.from('.test-gallery-subsection-reverse', {scrollTrigger: {
+      trigger: '.test-gallery-subsection-reverse',
+      toggleActions: 'play none none none'},
+      duration: 1.5, 
+      ease: "slow(0.7, 0.7, false)", 
+    
+      y: 150 
+    })
+          
+  }, [])
+
   return ( <>  
  
   <div className='test-gallery'>

@@ -84,6 +84,13 @@ a:visited {
   margin-top: 20px;
 }
 
+.test-gallery-subsection-reverse {
+  @include threeMagicLines();
+  width: 60vw;
+  border: 1px solid $darkPink;
+  margin-top: 20px;
+}
+
 .test-gallery-subsection-img {
   width: 100vw;
   img {
@@ -105,6 +112,8 @@ a:visited {
   width: 100vw;
   padding-left: 10px;
 }
+
+
 
 .social {
   @include threeMagicLines();
@@ -563,7 +572,87 @@ button {
   img {
     width: 100%;
   }
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
+
+
+.image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transition: opacity 1s ease;
+  opacity: 0;
+}
+
+
+
+.root {
+  font-family: 'Lato';
+   position: relative;
+   color: #fff;
+   background: none;
+   padding-bottom: 2rem;
+ }
+ 
+
+
+ .content {
+   display: flex;
+   justify-content: center;
+   width: 90vw;
+   min-height: 50vh;
+   z-index: 1;
+ }
+ 
+ 
+ .image {
+   overflow: hidden;
+   width: 40vw;
+   height: 50vh;
+
+   transition: opacity 1s ease;
+   opacity: 0;
+ }
+
+ .content-photo {
+  width: 40vw;
+  height: 50vh;
+ }
+
+ .content-text {
+  width: 40vw;
+  color: black;
+ }
+ 
+ .active {
+     opacity: 1;
+ }
+ 
+ 
+ 
+
+.active {
+    opacity: 1;
+}
+
+
+.offer-photo-show {
+  width: 30vw;
+  img {
+    width: 100%;
+  }
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+
+
 
 @keyframes newAnimation {
   0% {
@@ -687,6 +776,8 @@ footer {
   display: none;
 }
 
+
+
 @media (max-width: 1050px) {
   .photo-oferta,
   .photo-img {
@@ -760,6 +851,33 @@ footer {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90vw;
+    min-height: 50vh;
+    z-index: 1;
+  }
+
+  .content-photo {
+    width: 90vw;
+    height: 50vh;
+   }
+
+  .content-text {
+    width: 90vw;
+    color: black;
+   }
+
+  .image {
+    overflow: hidden;
+    width: 90vw;
+    transition: opacity 1s ease;
+    opacity: 0;
+  }
+ 
 
   form {
     width: 100vw !important;
