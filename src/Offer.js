@@ -26,7 +26,7 @@ function Offer() {
         }}
     />
   ))}
-const slidePresentationTime = 3000 
+const slidePresentationTime = 6000 
 const [currentSlide, setCurrentSlide] = useState(0) 
 
 
@@ -43,7 +43,7 @@ useEffect(() => {
   return (
     <div className="root">
       <div className="content">
-        <div className="content-photo">
+        <div>
           {images.map((image, index) => (
             <img
               id={index}
@@ -56,11 +56,12 @@ useEffect(() => {
             />
           ))}
         </div>
-        <div className="content-text">
+        
+      </div>
+      <div className="content-text">
               <h1> some h1 </h1>
           lorem ipsim doens't work in XHTML
         </div>
-      </div>
     </div>
   );
 }

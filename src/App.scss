@@ -598,6 +598,7 @@ button {
    color: #fff;
    background: none;
    padding-bottom: 2rem;
+   display: flex;
  }
  
 
@@ -605,7 +606,7 @@ button {
  .content {
    display: flex;
    justify-content: center;
-   width: 90vw;
+   width: 50vw;
    min-height: 50vh;
    z-index: 1;
  }
@@ -613,11 +614,12 @@ button {
  
  .image {
    overflow: hidden;
-   width: 40vw;
-   height: 50vh;
-
+    width: 40%;
+    height: 100%;
    transition: opacity 1s ease;
    opacity: 0;
+   object-fit: cover;
+   
  }
 
  .content-photo {
@@ -790,6 +792,58 @@ footer {
     }
   }
 
+  .root {
+    font-family: 'Lato';
+     position: relative;
+     color: #fff;
+     background: none;
+     width: 90vw;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 4rem;
+   }
+   
+  
+  
+   .content {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 90vw;
+     min-height: 50vh;
+     z-index: 1;
+   }
+   
+   
+   .image {
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+     transition: opacity 1s ease;
+   
+   }
+  
+   .content-photo {
+    width: 40vw;
+    height: 50vh;
+   }
+  
+   .content-text {
+    text-align: center;
+    width: 90vw;
+    color: black;
+    background-color: white;
+   
+    z-index: 1;
+    padding: 20px;
+   }
+
   .navigation-desktop {
     display: none !important;
   }
@@ -852,31 +906,6 @@ footer {
     padding-bottom: 40px;
   }
 
-  .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90vw;
-    min-height: 50vh;
-    z-index: 1;
-  }
-
-  .content-photo {
-    width: 90vw;
-    height: 50vh;
-   }
-
-  .content-text {
-    width: 90vw;
-    color: black;
-   }
-
-  .image {
-    overflow: hidden;
-    width: 90vw;
-    transition: opacity 1s ease;
-    opacity: 0;
-  }
  
 
   form {
