@@ -13,7 +13,7 @@ function About() {
   gsap.from('.about-photo', {scrollTrigger: {
     trigger: '.about-photo',
     toggleActions: 'restart pause restart pause'},
-    y: 80,
+    y: 60,
     opacity: 0,
     duration: 1.5
   })
@@ -25,7 +25,7 @@ useEffect(() => {
   gsap.from('.about-text', {scrollTrigger: {
     trigger: '.about-text',
     toggleActions: 'restart pause restart pause'},
-    x: 80,
+    y: -60,
     opacity: 0,
     duration: 1.5
   })

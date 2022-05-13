@@ -33,16 +33,8 @@ function Navigation() {
     
   }
   
-  function animation() {
-      gsap.to('.transition-effect', {
-        duration: 5,
-        x: 2700,
-        ease: Power4.easeOut,
-        opacity: 0
-    })
-    console.log('bruh')
-    
-  }
+
+  
   
 
 
@@ -56,16 +48,17 @@ function Navigation() {
         <img src={logo}/>
         </div>
         <div className='navigation-desktop'>
-          <div className='sub-nav' onClick={() => animation}><Link to="/"> STRONA GŁÓWNA </Link> </div>
+          <div className='sub-nav'><Link to="/"> STRONA GŁÓWNA </Link> </div>
           <div className='sub-nav'><Link to="/gallery"> PORTFOLIO </Link> </div>
           <div className='sub-nav'><Link to="/oferta"> OFERTA </Link> </div>
           <div className='sub-nav'><Link to="/kontakt"> KONTAKT </Link> </div>
           <div className='sub-nav'><Link to="/o-mnie"> O MNIE </Link> </div>
         </div>
 
-        <div className='navigation-mobile'>
+     
           <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}> BRUH </div>
           <div className={menu ?  "menu-open": "menu-close"}>
+          <div className='navigation-mobile'>
             <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}><Link to="/"> STRONA GŁÓWNA </Link> </div>
             <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}><Link to="/gallery"> PORTFOLIO </Link> </div>
             <div className='sub-nav-mobile' onClick={() => hideMenu(menu)}><Link to="/oferta"> OFERTA </Link> </div>
