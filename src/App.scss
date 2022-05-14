@@ -35,33 +35,8 @@ $white: #ffffff;
 
 
 
-.sub-nav-mobile {
-  background-color: white;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 30px;
-}
 
-.navigation-mobile {
-  position: absolute;
-  top: 3vh;
-  right: 0;
-  width: 70vw;
-  height: 100vh;
-  transform: translateX(70vw);
-}
 
-.menu-close {
-  transition: .8s .6s ease-in-out;
-  transform: translateX(0px);
-  opacity: 0;
-}
-
-.menu-open {
-  transition: .8s .6s ease-in-out;
-  transform: translateX(-250px);
-  opacity: 1;
-}
 
 a:link {
   text-decoration: none;
@@ -891,7 +866,45 @@ footer {
   }
 }
 
+.sub-nav-mobile {
+  display: none;
+}
+
+
 @media (max-width: 500px) {
+
+  .sub-nav-mobile {
+    display: block;
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+  }
+  
+  .navigation-mobile {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(0);
+  }
+  
+  .menu-close {
+    transition: .6s .2s ease-in-out;
+    transform: translateY(-120px);
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .menu-open {
+    transition: .6s .2s ease-in-out;
+    transform: translateY(0);
+    z-index: 90;
+    opacity: 1;
+  }
+
+
   .form-contant {
     @include threeMagicLines();
     width: 90vw;
