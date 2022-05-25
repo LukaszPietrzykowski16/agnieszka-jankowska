@@ -62,24 +62,26 @@ export default function Galeria() {
       </div>
     </div>
     </Link>
-   
+    <Link to="/slub-plener"> 
     <div className='test-gallery-subsection-reverse'>
 
-    
+  
     <div className='test-gallery-subsection-txt'>
     
     <p> 
     <h1> Plenerowe sesje ślubne </h1>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex quis eros viverra rutrum. Nulla imperdiet ante sit amet ultrices iaculis. Praesent ullamcorper mi eu risus viverra ultricies. Curabitur volutpat ultrices mauris eget fringilla. Praesent mollis semper congue. </p>
+        
   </div>
-      
+  
   <div className='test-gallery-subsection-img'>
         <img src={img3}/>
       </div>
      
       
     </div>
-
+    </Link>
+    <Link to="/chrzest-reportaz"> 
     <div className='test-gallery-subsection'>
       <div className='test-gallery-subsection-img'>
         <img src={img4}/>
@@ -91,7 +93,8 @@ export default function Galeria() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex quis eros viverra rutrum. Nulla imperdiet ante sit amet ultrices iaculis. Praesent ullamcorper mi eu risus viverra ultricies. Curabitur volutpat ultrices mauris eget fringilla. Praesent mollis semper congue. </p>
       </div>
     </div>
-
+    </Link>
+    <Link to="/chrzest-plener"> 
     <div className='test-gallery-subsection-reverse'>
      
       <div className='test-gallery-subsection-txt'>
@@ -104,7 +107,8 @@ export default function Galeria() {
         <img src={img5}/>
       </div>
     </div>
-
+    </Link>
+    <Link to="/imprezy-okolicznosciowe"> 
     <div className='test-gallery-subsection'>
       <div className='test-gallery-subsection-img'>
         <img src={img2}/>
@@ -112,17 +116,18 @@ export default function Galeria() {
       <div className='test-gallery-subsection-txt'>
     
         <p> 
-        <h1> Reportaż ślubny </h1>
+        <h1> Imprezy okolicznosciowe </h1>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex quis eros viverra rutrum. Nulla imperdiet ante sit amet ultrices iaculis. Praesent ullamcorper mi eu risus viverra ultricies. Curabitur volutpat ultrices mauris eget fringilla. Praesent mollis semper congue. </p>
       </div>
     </div>
-
+    </Link>
+    <Link to="/ciazowe"> 
     <div className='test-gallery-subsection-reverse'>
     
       <div className='test-gallery-subsection-txt'>
     
         <p> 
-        <h1> Reportaż ślubny </h1>
+        <h1> Ciazowe </h1>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex quis eros viverra rutrum. Nulla imperdiet ante sit amet ultrices iaculis. Praesent ullamcorper mi eu risus viverra ultricies. Curabitur volutpat ultrices mauris eget fringilla. Praesent mollis semper congue. </p>
       </div>
 
@@ -130,9 +135,10 @@ export default function Galeria() {
         <img src={img2}/>
       </div>
     </div>
-    
+    </Link>
   </div>
   
+   
   </>
   )
 }

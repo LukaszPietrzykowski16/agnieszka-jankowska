@@ -25,8 +25,6 @@ $white: #ffffff;
   align-items: center;
 }
 
-
-
 .policy {
   color: rgb(129, 128, 128);
   font-size: 0.8em;
@@ -35,7 +33,11 @@ $white: #ffffff;
 
 
 
-
+.box {
+  position: sticky;
+  z-index: 5;
+  top: 100px;
+}
 
 
 a:link {
@@ -50,6 +52,8 @@ a:visited {
 
 .test-gallery {
   @include fourMagicLines();
+  position: relative;
+  margin-bottom: 200px;
 }
 
 .test-gallery-subsection {
@@ -85,7 +89,8 @@ a:visited {
 .test-gallery-subsection-txt {
   @include threeMagicLines();
   width: 100vw;
-  padding-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 
@@ -148,9 +153,9 @@ a:visited {
 
 .navigation {
   @include threeMagicLines();
-  position: sticky;
   background-color: white;
-
+  position: sticky;
+  top: 0;
   z-index: 100;
   box-shadow: 2px 2px $darkPink;
   font-weight: bold;
@@ -183,6 +188,8 @@ a:visited {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  z-index: -2;
 }
 
 .pink {
@@ -237,6 +244,7 @@ a:visited {
   line-height: 1.2em;
   position: relative;
   overflow: hidden;
+  
 }
 
 .scroller {
@@ -328,6 +336,8 @@ button {
   margin: 1em;
   padding: 1em 2em;
   background-color: $pink;
+  position: relative;
+    
 
   // Using inset box-shadow instead of border for sizing simplicity
   box-shadow: inset 0 0 0 1px black;
@@ -425,6 +435,7 @@ button {
 
 .gallery-open {
   position: fixed;
+  z-index: 101;
   bottom: 0;
   left: 0;
   right: 0;
@@ -433,6 +444,7 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
+  
 }
 
 .gallery-open img {
@@ -567,13 +579,16 @@ button {
 
 
 
-.root {
+.content-gallery {
   font-family: 'Lato';
    position: relative;
    color: #fff;
    background: none;
-   padding-bottom: 2rem;
+    margin-bottom: 100px;
+    margin-top: 50px;
    display: flex;
+   position: relative;
+    
  }
  
 
@@ -749,10 +764,128 @@ footer {
   @include threeMagicLines();
 }
 
+.sub-nav-mobile {
+  display: none;
+}
+
+.content-text-mobile {
+  display: none;
+}
+
+@media (max-width: 1060px) {
+  .test-gallery-subsection-txt {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .content-text-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    text-align: center;
+    width: 100vw;
+    color: black;
+  }
+
+  .content-gallery {
+    margin-bottom: 10px;
+    margin-top: 50px; 
+   }
+   
+  .content {
+    margin-bottom: 20px;
+    height: 20vh;
+   }
+  
+  .content-text {
+    display: none;
+  }
+  .sub-portfolio {
+    width: 30vw;
+    text-align: center;
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    position: relative;
+  }
+  .sub-nav-mobile {
+    position: relative;
+    z-index: 9999;
+    display: block;
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  
+  }
+  
+  .navigation-mobile {
+    z-index: 5;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    transform: translateY(0);
+  }
+  
+  .menu-close {
+    transition: .6s .2s ease-in-out;
+    transform: translateY(-120px);
+    opacity: 0;
+    pointer-events: none;
+    height: 0px;
+  }
+  
+  .menu-open {
+    position: absolute;
+    transition: .6s .2s ease-in-out;
+    transform: translateY(0);
+    z-index: 90;
+    opacity: 1;
+  }
+  
+  
+  .gallery-open {
+    padding-bottom: 40px;
+  }
 
 
+  .left-arrow {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: 20px;
+    background-color: $darkPink;
+    margin: 20px;
+    height: 40px;
+    width: 40vw;
+    text-align: center;
+  }
 
-@media (max-width: 1050px) {
+  .right-arrow {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    right: 0; 
+    bottom: 20px;
+    background-color: $darkPink;
+    margin: 20px;
+    width: 40vw;
+
+  }
+  
+  
+  
   .photo-oferta,
   .photo-img {
     @include threeMagicLines();
@@ -844,7 +977,7 @@ footer {
 
   .footer-class {
     img {
-      width: 70%;
+      width: 30%;
     }
   }
 
@@ -866,14 +999,23 @@ footer {
   }
 }
 
-.sub-nav-mobile {
-  display: none;
+@media (max-width: 800px){
+  .sub-portfolio {
+    width: 40vw;
+  }
 }
 
 
 @media (max-width: 500px) {
+  .footer-class {
+    img {
+      width: 60%;
+    }
+  }
 
   .sub-nav-mobile {
+    position: relative;
+    z-index: 9999;
     display: block;
     background-color: white;
     padding-top: 40px;
@@ -882,11 +1024,10 @@ footer {
   }
   
   .navigation-mobile {
-    position: absolute;
+    z-index: 5;
+    position: relative;
     text-align: center;
-    right: 0;
     width: 100vw;
-    height: 100vh;
     transform: translateY(0);
   }
   
@@ -895,9 +1036,11 @@ footer {
     transform: translateY(-120px);
     opacity: 0;
     pointer-events: none;
+    height: 0px;
   }
   
   .menu-open {
+    position: absolute;
     transition: .6s .2s ease-in-out;
     transform: translateY(0);
     z-index: 90;
@@ -924,6 +1067,8 @@ footer {
     width: 90vw;
     margin-top: 20vh;
     margin-bottom: 20vh;
+    position: relative;
+    
   }
 
   .logo {
@@ -953,6 +1098,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     width: 90vw;
+    position: relative;
   }
 
   .sub-portfolio {

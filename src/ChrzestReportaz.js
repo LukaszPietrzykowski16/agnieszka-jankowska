@@ -3,64 +3,62 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './App.scss';
 
 import { faArrowLeft, faXRay, faArrowRight, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import img0 from './images/portfolio/reportaz-slubny/img0.jpg';
-import img1 from './images/portfolio/reportaz-slubny/img1.jpg';
-import img2 from './images/portfolio/reportaz-slubny/img2.jpg';
-import img3 from './images/portfolio/reportaz-slubny/img3.jpg';
-import img4 from './images/portfolio/reportaz-slubny/img4.jpg';
-import img5 from './images/portfolio/reportaz-slubny/img5.jpg';
-import img6 from './images/portfolio/reportaz-slubny/img6.jpg';
-import img7 from './images/portfolio/reportaz-slubny/img7.jpg';
-import img8 from './images/portfolio/reportaz-slubny/img8.jpg';
-import img9 from './images/portfolio/reportaz-slubny/img9.jpg';
-import img10 from './images/portfolio/reportaz-slubny/img10.jpg';
 
-import img11 from './images/portfolio/reportaz-slubny/img11.jpg';
-import img12 from './images/portfolio/reportaz-slubny/img12.jpg';
-import img13 from './images/portfolio/reportaz-slubny/img13.jpg';
-import img14 from './images/portfolio/reportaz-slubny/img14.jpg';
-import img15 from './images/portfolio/reportaz-slubny/img15.jpg';
-import img16 from './images/portfolio/reportaz-slubny/img16.jpg';
-import img17 from './images/portfolio/reportaz-slubny/img17.jpg';
-import img18 from './images/portfolio/reportaz-slubny/img18.jpg';
-import img19 from './images/portfolio/reportaz-slubny/img19.jpg';
-import img20 from './images/portfolio/reportaz-slubny/img20.jpg';
-import img21 from './images/portfolio/reportaz-slubny/img21.jpg';
-import img22 from './images/portfolio/reportaz-slubny/img22.jpg';
-import img23 from './images/portfolio/reportaz-slubny/img23.jpg';
-import img24 from './images/portfolio/reportaz-slubny/img24.jpg';
-import img25 from './images/portfolio/reportaz-slubny/img25.jpg';
-import img26 from './images/portfolio/reportaz-slubny/img26.jpg';
-import img27 from './images/portfolio/reportaz-slubny/img27.jpg';
-import img28 from './images/portfolio/reportaz-slubny/img28.jpg';
-import img29 from './images/portfolio/reportaz-slubny/img29.jpg';
-import img30 from './images/portfolio/reportaz-slubny/img30.jpg';
-import img31 from './images/portfolio/reportaz-slubny/img31.jpg';
-import img32 from './images/portfolio/reportaz-slubny/img32.jpg';
-import img33 from './images/portfolio/reportaz-slubny/img33.jpg';
-import img34 from './images/portfolio/reportaz-slubny/img34.jpg';
-import img35 from './images/portfolio/reportaz-slubny/img35.jpg';
-import img36 from './images/portfolio/reportaz-slubny/img36.jpg';
-import img37 from './images/portfolio/reportaz-slubny/img37.jpg';
-import img38 from './images/portfolio/reportaz-slubny/img38.jpg';
-import img39 from './images/portfolio/reportaz-slubny/img39.jpg';
-import img40 from './images/portfolio/reportaz-slubny/img40.jpg';
-import img41 from './images/portfolio/reportaz-slubny/img41.jpg';
-import img42 from './images/portfolio/reportaz-slubny/img42.jpg';
-import img43 from './images/portfolio/reportaz-slubny/img43.jpg';
-import img44 from './images/portfolio/reportaz-slubny/img44.jpg';
-import img45 from './images/portfolio/reportaz-slubny/img45.jpg';
-import img46 from './images/portfolio/reportaz-slubny/img46.jpg';
-import img47 from './images/portfolio/reportaz-slubny/img47.jpg';
-import img48 from './images/portfolio/reportaz-slubny/img48.jpg';
-import img49 from './images/portfolio/reportaz-slubny/img49.jpg';
-import img50 from './images/portfolio/reportaz-slubny/img50.jpg';
+import img1 from './images/portfolio/chrzest-sw-reportaz/img1.jpg';
+import img2 from './images/portfolio/chrzest-sw-reportaz/img2.jpg';
+import img3 from './images/portfolio/chrzest-sw-reportaz/img3.jpg';
+import img4 from './images/portfolio/chrzest-sw-reportaz/img4.jpg';
+import img5 from './images/portfolio/chrzest-sw-reportaz/img5.jpg';
+import img6 from './images/portfolio/chrzest-sw-reportaz/img6.jpg';
+import img7 from './images/portfolio/chrzest-sw-reportaz/img7.jpg';
+import img8 from './images/portfolio/chrzest-sw-reportaz/img8.jpg';
+import img9 from './images/portfolio/chrzest-sw-reportaz/img9.jpg';
+import img10 from './images/portfolio/chrzest-sw-reportaz/img10.jpg';
+
+import img11 from './images/portfolio/chrzest-sw-reportaz/img11.jpg';
+import img12 from './images/portfolio/chrzest-sw-reportaz/img12.jpg';
+import img13 from './images/portfolio/chrzest-sw-reportaz/img13.jpg';
+import img14 from './images/portfolio/chrzest-sw-reportaz/img14.jpg';
+import img15 from './images/portfolio/chrzest-sw-reportaz/img15.jpg';
+import img16 from './images/portfolio/chrzest-sw-reportaz/img16.jpg';
+import img17 from './images/portfolio/chrzest-sw-reportaz/img17.jpg';
+import img18 from './images/portfolio/chrzest-sw-reportaz/img18.jpg';
+import img19 from './images/portfolio/chrzest-sw-reportaz/img19.jpg';
+import img20 from './images/portfolio/chrzest-sw-reportaz/img20.jpg';
+import img21 from './images/portfolio/chrzest-sw-reportaz/img21.jpg';
+import img22 from './images/portfolio/chrzest-sw-reportaz/img22.jpg';
+import img23 from './images/portfolio/chrzest-sw-reportaz/img23.jpg';
+import img24 from './images/portfolio/chrzest-sw-reportaz/img24.jpg';
+import img25 from './images/portfolio/chrzest-sw-reportaz/img25.jpg';
+import img26 from './images/portfolio/chrzest-sw-reportaz/img26.jpg';
+import img27 from './images/portfolio/chrzest-sw-reportaz/img27.jpg';
+import img28 from './images/portfolio/chrzest-sw-reportaz/img28.jpg';
+import img29 from './images/portfolio/chrzest-sw-reportaz/img29.jpg';
+import img30 from './images/portfolio/chrzest-sw-reportaz/img30.jpg';
+import img31 from './images/portfolio/chrzest-sw-reportaz/img31.jpg';
+import img32 from './images/portfolio/chrzest-sw-reportaz/img32.jpg';
+import img33 from './images/portfolio/chrzest-sw-reportaz/img33.jpg';
+import img34 from './images/portfolio/chrzest-sw-reportaz/img34.jpg';
+import img35 from './images/portfolio/chrzest-sw-reportaz/img35.jpg';
+import img36 from './images/portfolio/chrzest-sw-reportaz/img36.jpg';
+import img37 from './images/portfolio/chrzest-sw-reportaz/img37.jpg';
+import img38 from './images/portfolio/chrzest-sw-reportaz/img38.jpg';
+import img39 from './images/portfolio/chrzest-sw-reportaz/img39.jpg';
+import img40 from './images/portfolio/chrzest-sw-reportaz/img40.jpg';
+import img41 from './images/portfolio/chrzest-sw-reportaz/img41.jpg';
+import img42 from './images/portfolio/chrzest-sw-reportaz/img42.jpg';
+import img43 from './images/portfolio/chrzest-sw-reportaz/img43.jpg';
+import img44 from './images/portfolio/chrzest-sw-reportaz/img44.jpg';
+import img45 from './images/portfolio/chrzest-sw-reportaz/img45.jpg';
+import img46 from './images/portfolio/chrzest-sw-reportaz/img46.jpg';
+import img47 from './images/portfolio/chrzest-sw-reportaz/img47.jpg';
+import img48 from './images/portfolio/chrzest-sw-reportaz/img48.jpg';
+import img49 from './images/portfolio/chrzest-sw-reportaz/img49.jpg';
+import img50 from './images/portfolio/chrzest-sw-reportaz/img50.jpg';
 
 const Reportaz = () => {
     
     const imageList = [
-        {id: 0,
-        imageUrl: img0}, 
         {id: 1,
             imageUrl: img1},
         {id: 2,
@@ -192,7 +190,7 @@ const Reportaz = () => {
         return singleImage.imageUrl
       })
     
-    let [index, setValue] = useState(0);
+    let [index, setValue] = useState();
     
     
     const hideGallery = (lightbox) => {
@@ -241,7 +239,7 @@ const Reportaz = () => {
         <div className='gallery-portfolio'>
         {imageList.map((singlePhoto) => {
             return (
-                <div className={"pic"} onClick={() => showGallery(singlePhoto.id)}>
+                <div className={"pic"} onClick={() => showGallery(singlePhoto.id - 1)}>
                     <img src={singlePhoto.imageUrl}/>
                 </div>
             )

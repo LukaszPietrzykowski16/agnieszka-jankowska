@@ -41,9 +41,10 @@ useEffect(() => {
 })
 
   return (
-    <div className="root">
+    <>
+    <div className="content-gallery">
       <div className="content">
-        <div>
+        <div  className="content-img">
           {images.map((image, index) => (
             <img
               id={index}
@@ -56,13 +57,18 @@ useEffect(() => {
             />
           ))}
         </div>
-        
+        <div className="content-text-mobile">
+        test
+        </div>
       </div>
       <div className="content-text">
               <h1> some h1 </h1>
           lorem ipsim doens't work in XHTML
         </div>
-    </div>
+
+    </div>   
+  
+    </>
   );
 }
 

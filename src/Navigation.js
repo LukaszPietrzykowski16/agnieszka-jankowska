@@ -22,6 +22,12 @@ import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons'
 import gsap from 'gsap';
 import {Power4} from 'gsap';
 import Reportaz from './Reportaz';
+import SlubPlener from './SlubPlener';
+import ChrzestPlener from './ChrzestPlener';
+import ChrzestReportaz from './ChrzestReportaz';
+import Imprezy from './Imprezy';
+import Ciazowe from './Ciazowe';
+import ScrollToTop from './ScrollToTop';
 
 function Navigation() {
   
@@ -46,6 +52,7 @@ function Navigation() {
  
     
     <Router>
+        <ScrollToTop/>
         <div className='navigation'>
         <div className='logo'>
         <img src={logo}/>
@@ -83,6 +90,11 @@ function Navigation() {
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/o-mnie" element={<Omnie />} />
             <Route path="/reportaz-slubny" element={<Reportaz />} />
+            <Route path="/slub-plener" element={<SlubPlener />} />
+            <Route path="/chrzest-reportaz" element={<ChrzestReportaz />} />
+            <Route path="/chrzest-plener" element={<ChrzestPlener />} />
+            <Route path="/imprezy-okolicznosciowe" element={<Imprezy />} />
+            <Route path="/ciazowe" element={<Ciazowe />} />
         </Routes>
     
     </Router>
